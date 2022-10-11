@@ -4,8 +4,8 @@
   - themes
   - customization
 
-- title: Examples
+- title: Decompilers
   docs:
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+  - ida
+  - ghidra
+  - binja

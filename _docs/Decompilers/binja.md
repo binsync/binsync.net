@@ -1,6 +1,6 @@
 ---
-title: Font Awesome Icon List
-permalink: /docs/font-awesome/
+title: Binary Ninja
+permalink: /docs/binja/
 description: Demo of all Font Awesome icons
 ---
 
