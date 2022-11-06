@@ -5,8 +5,8 @@ description: >
   BinSync is a cross-decompiler collaboration tool
 lang: en-US
 
-baseurl: "/binsync.net" # the subpath of your site, e.g. /blog/
-url: https://binsync.github.io # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: https://binsync.net # the base hostname & protocol for your site
 git_address: https://github.com/binsync
 git_edit_address: https://github.com/binsync/binsync.net
 
