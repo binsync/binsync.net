@@ -1,8 +1,14 @@
 - title: Getting Started
   docs:
   - home
-  - themes
-  - customization
+  - install
+  - usage
+
+- title: Usage Guide
+  docs:
+  - fundamentals
+  - creating-bs-proj
+  - joining-bs-proj
 
 - title: Decompilers
   docs:

@@ -1,18 +1,14 @@
 # binsync.net
 ## Running locally
+First you need to have Ruby and Gem installed, which may look like this:
+```
+sudo apt-get install ruby ruby-full build-essential gem -y && gem install bundler
+```
 
-You need Ruby and gem before starting, then:
-
-```bash
-# install bundler
-gem install bundler
-
-# clone the project
-git clone https://github.com/aksakalli/jekyll-doc-theme.git
-cd jekyll-doc-theme
-
-# install dependencies
+Next, while in this repo, run:
+```
 bundle install
-
-# run jekyll with dependencies
 bundle exec jekyll serve
+``` 
+
+And the site should be up! If you you encountered an error, try installing
