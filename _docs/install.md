@@ -75,7 +75,7 @@ cp binsync_example_repo/fauxware .
 ```
 Or check your plugin menu. For example, if you are using IDA, you should see this option:
 
-   <img src="/assets/images/binsync_idaplugin.png" width="50%" height="50%">
+   <img src="/assets/img/binsync_idaplugin.png" width="50%" height="50%">
 
 If neither does not show, it means the plugin is not in the plugins folder.
 
@@ -84,7 +84,7 @@ If neither does not show, it means the plugin is not in the plugins folder.
    2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: settings`. On Binja it's under `Tools`.
 
 4. Give a username and find the example_repo from earlier, click ok
-   <img src="/assets/images/demo1.png" width="50%" height="50%">
+   <img src="/assets/img/demo1.png" width="50%" height="50%">
 
 The Git repo refers to the local path of the BinSync repo. If you do not create a BinSync repo locally, you should leave it blank. In this exmaple, you should copy the git URL (`git@github.com:mahaloz/binsync_example_repo.git`) to "Remote URL".
 
@@ -95,7 +95,7 @@ The Git repo refers to the local path of the BinSync repo. If you do not create 
 
 6. You should now see an Info Panel. Click on `Activity`, you can see other user's activities. You should also notice
    your username on the bottom right of the panel to be green (online).
-   <img src="/assets/images/demo2.png" width="50%" height="50%">
+   <img src="/assets/img/demo2.png" width="50%" height="50%">
 
 Congrats, your BinSync seems to connect to a repo, and recognize you as a user.
 Let's test pulling to verify you can actually do stuff with your install.
@@ -104,7 +104,7 @@ Let's test pulling to verify you can actually do stuff with your install.
    Info Panel that the words on the bottom left say `main@0x40071d`. This is your context.
 
 8. Now click on the `Context` tab, and right click on the user `mahaloz`. Click the `Sync` popup.
-   <img src="/assets/images/demo3.png" width="50%" height="50%">
+   <img src="/assets/img/demo3.png" width="50%" height="50%">
 
 9. If everything works out, your decompilation should've changed for `main`. Now the function should be named
    `mahaloz_main`, and it should look something like:
@@ -149,7 +149,7 @@ Like in the [validation](#validation) section above, you can create your own rep
 will work with any git url, but for this tutorial we will only show how to do it on GitHub.
 
 1. Make a GitHub repo; it does not matter if you init it or add a README
-<img src="/assets/images/demo4.png" width="50%" height="50%">
+<img src="/assets/img/demo4.png" width="50%" height="50%">
 
 2. Copy the SSH url from the next page; It would look something like: `git@github.com:mahaloz/my_binsync_project.git`
 
@@ -158,7 +158,7 @@ will work with any git url, but for this tutorial we will only show how to do it
 4. Configure BinSync in your decompiler and fill in the remote url and user. You can put nothing in the git repo
    section as it will default to putting the repo next to the binary you have open.
 
-   <img src="/assets/images/demo5.png" width="50%" height="50%">
+   <img src="/assets/img/demo5.png" width="50%" height="50%">
 
 You should now be connected to your new remote repo. The remote on GitHub will also show 2 new branches now:
 - your first user
