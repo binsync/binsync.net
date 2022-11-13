@@ -2,7 +2,7 @@
   docs:
   - home
   - install
-  - usage
+  - install-validation
 
 - title: Usage Guide
   docs:
@@ -12,6 +12,13 @@
 
 - title: Decompilers
   docs:
+  - dec-introduction
   - ida
-  - ghidra
   - binja
+  - ghidra
+  - angr
+
+- title: Hacking
+  docs:
+  - hacking-binsync-overview
+  - hacking-add-decompiler

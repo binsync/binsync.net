@@ -3,14 +3,10 @@ title: BinSync Fundamentals
 permalink: /docs/fundamentals/
 ---
 
-<p align="center">
-   <img src="https://i.imgur.com/zQcqqML.png" alt="BinSync Logo"/>
-</p>
-
-It's a good idea to start here before going to any other Manual so you understand all the features BinSync has to offer and how to access them.
+It's a good idea to start here before going to any other use-page so you understand all the features BinSync has to offer and how to access them.
 
 ## The Core Basics
-BinSync works on Git, which means that everything is version controlled and nothing is automatically changed in your local client. If you followed the [README](https://github.com/angr/binsync/blob/master/README.md) in the main repo, then you should already understand that you request specific users content. 
+BinSync works on Git, which means that everything is version-controlled, and nothing is automatically changed in your local client. If you followed the [Install Validation](/docs/install-validation) page, then you should already understand that you request specific users content. 
 
 ### Syncing: No Pulling, No Pushing
 You may be thinking that when you click `Sync`, it's like you are pulling, but that is not really the case. Under the hood we have a thread going that is doing real `pulling` and `pushing` on the Git level to update your Git's knowledge of users. This makes more sense if you look at how users are stored in the BinSync database. 
@@ -38,7 +34,7 @@ BinSync is smart enough to not ask you to push specific functions. BinSync will 
 The `Info Panel` is the singular place where you will get information about the BinSync database and the actions you can perform on your local database. 
 
 On the bottom of the `Info Panel`, there is text on the right and left.
-![](manual1.png)
+![](/assets/img/use_guide/manual1.png)
 
 The text on the left is your current Context, which we will explain in the [Context](#context) Tab section. 
 
@@ -59,7 +55,7 @@ The table shows users who have made a change to the function you are currently l
 ### Functions
 The Functions tab is likely the tab you will look at first when you open a new BinSync project that others have worked on. The table shows you _all_ the functions in the Binary that have been modified by at least one person. You can look at this to see what the group has started reversing. 
 
-![](manual2.png)
+![](/assets/img/use_guide/manual2.png)
 
 Right-clicking on row give you the ability to do two thins:
 1. Sync from the currently displayed user (the last person to change it) for that specific function
@@ -68,14 +64,14 @@ Right-clicking on row give you the ability to do two thins:
 ### Globals
 The Globals tab shows things that can't be associated to a function. This includes Structs, Global Variables, Enums. 
 
-![](manual3.png)
+![](/assets/img/use_guide/manual3.png)
 
 Similarly to the Functions tab, you can sync either from the displayed person or some other person that has made a change in the past.
 
 ### Activity
 The Activity tab shows you people who are assumed to be actively reversing the Binary right now. This will show you a table of any user that has made a change in the last 2 hours to something in their binary. 
 
-![](manual4.png)
+![](/assets/img/use_guide/manual4.png)
 
 Like all other tabs, you can sync either from the displayed person and artifact or from some other person.
 
