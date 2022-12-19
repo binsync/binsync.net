@@ -92,4 +92,4 @@ int __cdecl mahaloz_main(int argc, const char **argv, const char **envp)
 Take note of the variable names & types, and the comments. This will look different per-decompiler, but the symbols and
 types should line up for the most part.
 
-For more general use, tips, and advice, see our [Wiki Manual](https://github.com/angr/binsync/wiki/Manual) for full help.
+For more general use, tips, and advice, see our [Use Guide](../fundamentals) for full help.
