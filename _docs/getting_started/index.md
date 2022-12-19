@@ -22,7 +22,7 @@ center of BinSync's syncing ability. Here are the supported REAs:
 Note: all types support user-created types like structs. In short, with BinSync you can track, manage, and sync 
 changes you make in your decompiler with any decompiler supported by BinSync. 
 
-For syncronous help, or a more vocal discussion, join our discord:
+For synchronous help, or a more vocal discussion, join our discord:
 [![Discord](https://img.shields.io/discord/900841083532087347?label=Discord&style=plastic)](https://discord.gg/wZSCeXnEvR)
 
 ## Supported Platforms
