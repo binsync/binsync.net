@@ -31,8 +31,8 @@ Or check your plugin menu. For example, if you are using IDA, you should see thi
 If neither does not show, it means the plugin is not in the plugins folder.
 
 3. Open the BinSync Config Pane
-   1. You can hit `Ctrl+Shift+B` to open it, OR
-   2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: settings`. On Binja it's under `Tools`.
+   1. You can hit `Ctrl+Shift+B` or `Ctrl+Alt+Shift+B` to open it, OR
+   2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: Configure...`. On Binja it's under `Plugins`. On Ghidra under `Tools`
 
 4. Give a username and find the example_repo from earlier, click ok
    <img src="/assets/img/demo1.png" width="50%" height="50%">
@@ -62,30 +62,29 @@ Let's test pulling to verify you can actually do stuff with your install.
 
 ```c
 // ***
-// This is a function comment:
-//
-// Thanks for using BinSync <3
-//
-// - mahaloz
+// This is a large function comment.
+// Thanks for using BinSync!
+// 
+// <3 mahaloz
 // ***
-int __cdecl mahaloz_main(int argc, const char **argv, const char **envp)
+__int64 __fastcall mahaloz_main(int a1, char **a2, char **a3)
 {
-  int buf;
-  mahalo_struct special_stack_var;
-  char username[16];
+  int ret_val; // [rsp+1Ch] [rbp-24h] BYREF
+  mahaloz_struct special_var; // [rsp+20h] [rbp-20h] BYREF
+  char buf[16]; // [rsp+30h] [rbp-10h] BYREF
 
-  username[8] = 0;
-  LOBYTE(special_stack_var.field_8) = 0;
-  puts("Username: ");
-  read(0, username, 8uLL);
-  read(0, &buf, 1uLL);
-  puts("Password: ");                           // totally a password
-  read(0, &special_stack_var, 8uLL);
-  read(0, &buf, 1uLL);
-  buf = authenticate(username, &special_stack_var);
-  if ( !buf )
-    rejected(username);
-  return accepted(username);
+  buf[8] = 0;
+  LOBYTE(special_var.field_8) = 0;
+  puts("Username: ");   // probs some username thing!
+  read(0, buf, 8uLL);
+  read(0, &ret_val, 1uLL);
+  puts("Password: ");
+  read(0, &special_var, 8uLL);
+  read(0, &ret_val, 1uLL);
+  ret_val = sub_400664(buf, &special_var);
+  if ( !ret_val )
+    sub_4006FD(buf);
+  return sub_4006ED(buf);
 }
 ```
 
