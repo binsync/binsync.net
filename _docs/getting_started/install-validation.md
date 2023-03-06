@@ -14,30 +14,29 @@ In this tutorial, you will validate your BinSync install can:
 For this tutorial, we will use the example binsync repo that is a part of the BinSync project. 
 
 ### Sync Validation 
-1. Copy down a local version of the testing repo and grab the `fauxware` binary
+1. Copy down a local version of the binary fauxware from the example repo:
 ```bash
-git clone git@github.com:mahaloz/binsync_example_repo.git
-cp binsync_example_repo/fauxware .
+wget https://github.com/binsync/example.bsproj/raw/data/fauxware
 ```
 
 2. Open the fauxware binary in your decompiler, verify it has loaded in the decompiler terminal
 ```
-[BinSync] 2.9.1 loaded
+[BinSync] X.X.X loaded
 ```
 Or check your plugin menu. For example, if you are using IDA, you should see this option:
 
    <img src="/assets/img/binsync_idaplugin.png" width="50%" height="50%">
 
-If neither does not show, it means the plugin is not in the plugins folder.
+If neither show, it means the plugin is not in the plugins folder.
 
 3. Open the BinSync Config Pane
    1. You can hit `Ctrl+Shift+B` or `Ctrl+Alt+Shift+B` to open it, OR
    2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: Configure...`. On Binja it's under `Plugins`. On Ghidra under `Tools`
 
-4. Give a username and find the example_repo from earlier, click ok
+4. Give a username and enter `https://github.com/binsync/example.bsproj.git` in the remote, click ok
    <img src="/assets/img/demo1.png" width="50%" height="50%">
 
-The Git repo refers to the local path of the BinSync repo. If you do not create a BinSync repo locally, you should leave it blank. In this exmaple, you should copy the git URL (`git@github.com:mahaloz/binsync_example_repo.git`) to "Remote URL".
+If you already had the repo cloned down locally, you can instead select that folder from you filesystem. 
 
 5. Verify your terminal says (with your username):
 ```bash
