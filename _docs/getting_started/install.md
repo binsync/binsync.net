@@ -45,10 +45,10 @@ If you were able to use the built-in Python script, skip this.
 If you are unable to install using the earlier method, you are probably on Windows. In that case, installing
 BinSync is a two-step process: 
 1. Install the core with the Python version associated with your decompiler: `pip3 install binsync`
-2. Install the decompiler plugin directly into your decompilers `plugin` folder.
+2. Install the decompiler stub directly into your decompilers `plugin` folder.
 
-For step 2, you copy all files (and folders) found under the plugin folder in BinSync. As an example, for IDA,
-you would copy everything in `plugins/ida_binsync/*` to the plugins folder.
+For step 2, you copy (or link) the file associated with your decompiler in the `decompiler_stubs` folder. As an example, for IDA you would copy only
+the `decompiler_stubs/ida_binsync.py` file, but for angr you would copy the entire `decompiler_stubs/angr_binsync` folder. 
 
 After you are done with that, if you are using one of the following decompilers, please go to the link
 and follow the extra setup instructions:
