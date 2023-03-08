@@ -8,6 +8,9 @@ Installing BinSync can be as simple as using pip in combination with our Python-
 pip3 install binsync && binsync --install 
 ```
 
+If you are using Binary Ninja, and you don't plan on developing BinSync, it's recommended to install it through the 
+Binary Ninja plugin manager, which allows you to skip these install steps. 
+
 Installation is a two-step process because we need to first install the BinSync core library into your Python install,
 then we need to copy the plugin code to your respective decompiler. Using the above command is the simplest solution
 since it will open an assistant prompt that asks for decompiler paths. It looks something like:
