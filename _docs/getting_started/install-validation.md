@@ -14,12 +14,17 @@ In this tutorial, you will validate your BinSync install can:
 For this tutorial, we will use the example binsync repo that is a part of the BinSync project. 
 
 ### Sync Validation 
-1. Copy down a local version of the binary fauxware from the example repo:
+1. Clone down the example BinSync project 
 ```bash
-wget https://github.com/binsync/example.bsproj/raw/data/fauxware
+git clone https://github.com/binsync/example.bsproj.git
 ```
 
-2. Open the fauxware binary in your decompiler, verify it has loaded in the decompiler terminal
+2. Copy the `fauxware` binary out of the `data` branch for testing
+```
+(cd example.bsproj && git checkout data && cp fauxware ../)
+```
+
+3. Open the fauxware binary in your decompiler, verify it has loaded in the decompiler terminal
 ```
 [BinSync] X.X.X loaded
 ```
@@ -29,34 +34,36 @@ Or check your plugin menu. For example, if you are using IDA, you should see thi
 
 If neither show, it means the plugin is not in the plugins folder.
 
-3. Open the BinSync Config Pane
+4. Open the BinSync Config Pane and click the `Open` button
    1. You can hit `Ctrl+Shift+B` or `Ctrl+Alt+Shift+B` to open it, OR
    2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: Configure...`. On Binja it's under `Plugins`. On Ghidra under `Tools`
 
-4. Give a username and enter `https://github.com/binsync/example.bsproj.git` in the remote, click ok
+5. Enter a username and set the project path to the location of `example.bsproj`
    <img src="/assets/img/demo1.png" width="50%" height="50%">
 
-If you already had the repo cloned down locally, you can instead select that folder from you filesystem. 
+If you are running these instructions on a computer without internet, you may want to open the project settings group and select `Disable auto-push to remote`. 
 
-5. Verify your terminal says (with your username):
+6. Verify your terminal says (with your username):
 ```bash
 [BinSync]: Client has connected to sync repo with user: <username>.
 ```
 
-6. You should now see an Info Panel. Click on `Activity`, you can see other user's activities. You should also notice
+If you are on angr-management or Ghidra this may be hidden. Instead, you should see a panel open with your username in green or yellow (indicating a valid setup to the project).
+
+7. You should now see an Info Panel. Click on `Activity`, you can see other user's activities. You should also notice
    your username on the bottom right of the panel to be green (online).
    <img src="/assets/img/demo2.png" width="50%" height="50%">
 
 Congrats, your BinSync seems to connect to a repo, and recognize you as a user.
 Let's test pulling to verify you can actually do stuff with your install.
 
-7. In your decompiler, click anywhere in the function `main` once. After a second or two you should notice on the
+8. In your decompiler, click anywhere in the function `main` once. After a second or two you should notice on the
    Info Panel that the words on the bottom left say `main@0x40071d`. This is your context.
 
-8. Now click on the `Context` tab, and right click on the user `mahaloz`. Click the `Sync` popup.
+9. Now click on the `Context` tab, and right click on the user `mahaloz`. Click the `Sync` popup.
    <img src="/assets/img/demo3.png" width="50%" height="50%">
 
-9. If everything works out, your decompilation should've changed for `main`. Now the function should be named
+10. If everything works out, your decompilation should've changed for `main`. Now the function should be named
    `mahaloz_main`, and it should look something like:
 
 ```c
@@ -87,7 +94,6 @@ __int64 __fastcall mahaloz_main(int a1, char **a2, char **a3)
 }
 ```
 
-Take note of the variable names & types, and the comments. This will look different per-decompiler, but the symbols and
-types should line up for the most part.
+Take note of the variable names & types, and the comments. This will look different per decompiler, but the symbols and types should line up for the most part.
 
-For more general use, tips, and advice, see our [Use Guide](../fundamentals) for full help.
+For more general use, tips, and advice, see our [Use Guide](../fundamentals).
