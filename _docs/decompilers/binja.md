@@ -14,13 +14,9 @@ for Binja is set to the same python as `python3` in your terminal. To do that:
 ## Support Progress
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
-| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
-| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
-| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
-| Push      	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :heavy_check_mark:			           | :x: 					                     | :heavy_check_mark: 					         |
-| Auto Push 	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :heavy_check_mark:			           | :x: 					                     | :heavy_check_mark: 					         |
-
-<p align="center">
-   <img src="https://github.com/binsync/binsync/blob/main/assets/images/binja_sync.gif?raw=true" alt="Binja Sync"/>
-</p>
+|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
+| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
+| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
+| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
+| Push      	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :heavy_check_mark:			| :x: 					| :heavy_check_mark: 					|
+| Auto Push 	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :heavy_check_mark:			| :x: 					| :heavy_check_mark: 					|
