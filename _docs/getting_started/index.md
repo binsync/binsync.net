@@ -4,6 +4,9 @@ permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
+
+# BinSync
+
 <p align="center">
    <img src="https://i.imgur.com/qdesKpg.png" style="width: 30%;" alt="BinSync Logo"/>
 </p>
@@ -20,11 +23,24 @@ center of BinSync's syncing ability. Here are the supported REAs:
 - Structs
 - Comments
 
-Note: all types support user-created types like structs. In short, with BinSync you can track, manage, and sync 
-changes you make in your decompiler with any decompiler supported by BinSync. 
+Note: all types support user-created types like structs.
 
-For synchronous help, or a more vocal discussion, join our discord:
+<p align="center">
+   <img src="https://github.com/binsync/binsync/blob/main/assets/images/binja_sync.gif?raw=true" alt="Binja Sync"/>
+</p>
+
+**Join our discord below for more online help**:
+
 [![Discord](https://img.shields.io/discord/900841083532087347?label=Discord&style=plastic)](https://discord.gg/wZSCeXnEvR)
+
+## Quick Start
+For all installs, it's best to use our two-part installer with Python:
+```bash
+pip3 install binsync && binsync --install 
+```
+
+BinSync is also available in the Binary Ninja plugin manager.
+For full install information, please read our [Quickstart Docs](https://binsync.net/docs/home)
 
 ## Supported Platforms
 - IDA Pro: **>= 7.3**
@@ -32,7 +48,8 @@ For synchronous help, or a more vocal discussion, join our discord:
 - angr-management: **>= 9.0**
 - Ghidra: **>= 10.1**
 
-All versions require **Python >= 3.6** and **Git** installed on your system. Ghidra support is still very much in early stage, so only expect the minimal features.
+All versions require **Python >= 3.4** and **Git** installed on your system. Ghidra support is still very much in early stage, so only expect the minimal features like artifact name syncing and comments.
+
 
 ## Decompiler Support Progress
 Although we support the decompilers in the earlier section, not every decompiler is supported at the same level of syncing. 
@@ -41,39 +58,52 @@ To understand the difference between artifact support, pull, push, and auto push
 ### IDA Pro
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|-----------	|--------------------	|-----------------------	| --------------------  |--------------------	|--------------------	|--------------------	|
-| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
-| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
-| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
-| Push      	| :heavy_check_mark: 	| :heavy_check_mark: 	    | :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :x: 	|
-| Auto Push     | :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 	                | :heavy_check_mark: 	            | :heavy_check_mark: 	          | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 	                | :heavy_check_mark: 	            | :heavy_check_mark: 	          | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 	                | :heavy_check_mark: 	            | :heavy_check_mark: 	          | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark: 	                     | :heavy_check_mark: 	               | :heavy_check_mark: 	                | :heavy_check_mark: 	            | :heavy_check_mark: 	          | :x: 	                            |
+| Auto Push                          | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 	                | :heavy_check_mark: 	            | :heavy_check_mark: 	          | :heavy_check_mark: 	             |
+
+<p align="center">
+   <img src="https://github.com/binsync/binsync/blob/main/assets/images/ida_sync.gif?raw=true./assets/images/ida_sync.gif" alt="IDA Sync"/>
+</p>
+
 
 ### Binary Ninja
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
-| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
-| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
-| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :heavy_check_mark:   					| :x: 					| :heavy_check_mark: 	|
-| Push      	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :heavy_check_mark:			| :x: 					| :heavy_check_mark: 					|
-| Auto Push 	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :heavy_check_mark:			| :x: 					| :heavy_check_mark: 					|
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :heavy_check_mark:   					      | :x: 					                     | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :heavy_check_mark:			           | :x: 					                     | :heavy_check_mark: 					         |
+| Auto Push 	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :heavy_check_mark:			           | :x: 					                     | :heavy_check_mark: 					         |
+
+<p align="center">
+   <img src="https://github.com/binsync/binsync/blob/main/assets/images/binja_sync.gif?raw=true" alt="Binja Sync"/>
+</p>
 
 ### Ghidra
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
-| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Push      	| :x: 					| :x:						| :x:					| :x:					| :x: 					| :x: 					|
-| Auto Push 	| :x: 					| :x:						| :x:					| :x:					| :x: 					| :x: 					|
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Push      	                        | :x: 					                                | :x:						                          | :x:					                            | :x:					                        | :x: 					                     | :x: 					                        |
+| Auto Push 	                        | :x: 					                                | :x:						                          | :x:					                            | :x:					                        | :x: 					                     | :x: 					                        |
+
+<p align="center">
+   <img src="https://github.com/binsync/binsync/blob/main/assets/images/ghidra_sync.gif?raw=true" alt="Binja Sync"/>
+</p>
 
 ### angr-management
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
-| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Push      	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :x:					| :x: 					| :heavy_check_mark: 					|
-| Auto Push 	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :x:					| :x: 					| :heavy_check_mark: 					|
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :x: 					                           | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :x:					                        | :x: 					                     | :heavy_check_mark: 					         |
+| Auto Push 	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :x:					                            | :x:					                        | :x: 					                     | :heavy_check_mark: 					         |
