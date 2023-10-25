@@ -8,6 +8,7 @@ Installing BinSync can be as simple as using pip in combination with our Python-
 pip3 install binsync && binsync --install 
 ```
 
+**If you are using BS with Ghidra**, you must install using `pip3 install binsync[ghidra]` for the extra dependencies. 
 If you are using Binary Ninja, and you don't plan on developing BinSync, it's recommended to install it through the 
 Binary Ninja plugin manager, which allows you to skip these install steps. 
 
@@ -34,12 +35,8 @@ If you are not able to find the `binsync` command, you might be able to access i
 **NOTE: you must pip install binsync to the python interpreter used in your decompiler**. If even that fails,
 please jump to the [Manual Install](#manual-install) section.
 
-After you are done with that, if you are using one of the following decompilers, please go to the link
-and follow the extra setup instructions:
-- [Ghidra](../ghidra)
 
 ## Manual Install
-
 If you were able to use the built-in Python script, skip this. 
 
 If you are unable to install using the earlier method, you are probably on Windows. In that case, installing
@@ -49,10 +46,7 @@ BinSync is a two-step process:
 
 For step 2, you copy (or link) the file associated with your decompiler in the `decompiler_stubs` folder. As an example, for IDA you would copy only
 the `decompiler_stubs/ida_binsync.py` file, but for angr you would copy the entire `decompiler_stubs/angr_binsync` folder. 
-
-After you are done with that, if you are using one of the following decompilers, please go to the link
-and follow the extra setup instructions:
-- [Ghidra](../ghidra)
+In the case of Ghidra, you would place everything in the `decompiler_stubs/ghidra_binsync` into your `ghidra_scripts` folder (usually found in `~/`). 
 
 ## Unlocking your SSH Key
 If you plan on using BinSync to pull and push to a BinSync repo, you need a SSH key that is associated with that repo. If you plan 

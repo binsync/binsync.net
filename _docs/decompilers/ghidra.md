@@ -3,29 +3,21 @@ title: Ghidra
 permalink: /docs/ghidra/
 ---
 
-## Extra Install Steps
-After following the setps in the [Install](../install) page, you will need to do the following:
-1. Start Ghidra
-2. On the Project Window, click the tab `File->Install Extensions...`
-![](/assets/img/ghidra_extra.png)
-
-3. Search in the filter for "binsync", and enable it by clickng on the box
-	- If you don't see the binsync plugin, download the latest release from [here](https://github.com/angr/binsync/releases/latest/download/binsync-ghidra-plugin.zip) and add it manually to the Extensions/Ghidra folder in your install.
-
-4. Restart Ghidra
-5. Open a binary, now click `File->Configure...` tab and enable `binsync` plugin.
-
-You are done! Now you should be able to hit `Ctrl+Shift+B` to start the BinSync config. 
-You can also find it in the `Tools` tab when you have a binary open.  
-
+## Extra Info
+BinSync is written in Python 3, however, Ghidra only has a Python 2 backend. 
+To deal with this, we use a vendored version of [ghidra_bridge](https://github.com/justfoxing/ghidra_bridge).
+We copy a BinSync stub, along with Ghidra Bridge code, into the `ghidra_scripts` folder, which is Python 2. 
+Inside Ghidra, when you start BinSync, we use the Python 2 side to start the Python 3 GUI in another thread. 
+We use Ghidra Bridge to make change requests to the Ghidra UI.
 
 ## Support Progress
-<!--              Func Headers,             Stack Vars,               Global Vars,          Structs,            Enums,                    Comments-->
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
-|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
-| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
-| Push      	| :x: 					| :x:						| :x:					| :x:					| :x: 					| :x: 					|
-| Auto Push 	| :x: 					| :x:						| :x:					| :x:					| :x: 					| :x: 					|
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :x: 					                     | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :x: 					                     | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark:					             | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark: 					                 | :heavy_check_mark:						           | :heavy_check_mark:				              | :heavy_check_mark: 						       | :x: 					                     | :x: 					                        |
+| Auto Push 	                        | :x: 					                                | :x:						                          | :x:					                            | :x:					                        | :x: 					                     | :x: 					                        |
+
+
