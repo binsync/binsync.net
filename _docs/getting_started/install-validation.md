@@ -68,28 +68,28 @@ Let's test pulling to verify you can actually do stuff with your install.
 
 ```c
 // ***
-// This is a large function comment.
-// Thanks for using BinSync!
+// This is a large comment in the header of
+// the function! Thanks for using BinSync
 // 
-// <3 mahaloz
+// - <3 mahaloz
 // ***
-__int64 __fastcall mahaloz_main(int a1, char **a2, char **a3)
+char __cdecl mahaloz_main(int my_arg1, const char **my_arg2, int **my_arg3)
 {
-  int ret_val; // [rsp+1Ch] [rbp-24h] BYREF
+  int v4; // [rsp+1Ch] [rbp-24h] BYREF
   mahaloz_struct special_var; // [rsp+20h] [rbp-20h] BYREF
   char buf[16]; // [rsp+30h] [rbp-10h] BYREF
 
   buf[8] = 0;
-  LOBYTE(special_var.field_8) = 0;
-  puts("Username: ");   // probs some username thing!
-  read(0, buf, 8uLL);
-  read(0, &ret_val, 1uLL);
+  LOBYTE(special_var.s3) = 0;
+  puts("Username: ");
+  read(0, buf, 8uLL);                           // the username is likley read here
+  read(0, &v4, 1uLL);
   puts("Password: ");
   read(0, &special_var, 8uLL);
-  read(0, &ret_val, 1uLL);
-  ret_val = sub_400664(buf, &special_var);
-  if ( !ret_val )
-    sub_4006FD(buf);
+  read(0, &v4, 1uLL);
+  v4 = authenticate(buf, &special_var);
+  if ( !v4 )
+    rejected(buf);
   return sub_4006ED(buf);
 }
 ```
