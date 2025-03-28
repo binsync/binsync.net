@@ -28,7 +28,7 @@ For synchronous help, or a more vocal discussion, join our discord:
 [![Discord](https://img.shields.io/discord/900841083532087347?label=Discord&style=plastic)](https://discord.gg/wZSCeXnEvR)
 
 ## Supported Platforms
-- IDA Pro: **>= 8.4** (if you have an older version, use `v4.10.1`)
+- IDA Pro: **>= 8.4** (if you have an older version, use [BinSync v4.10.1](https://github.com/binsync/binsync/commit/bac7b9d4a6cca64810bb07428391415702765cd4))
 - Binary Ninja: **>= 2.4**
 - angr-management: **>= 9.0**
 - Ghidra: **>= 10.1**

@@ -3,11 +3,11 @@ title: Binary Ninja
 permalink: /docs/binja/
 ---
 
-## Extra Install Steps
+## Extra Install Steps (if you didn't use the Plugin Manager)
 Since Binja may be running a custom Python interpreter, please manually set or verify that your Python
 for Binja is set to the same python as `python3` in your terminal. To do that:
 1. Open Binja
-2. Click `Settings->Python`
+2. Click `Edit->Settings->User` and search for Python
 3. Select the correct Python interpreter for `Python Interpreter`
 4. Restart Binja
 
