@@ -3,6 +3,11 @@ title: Ghidra
 permalink: /docs/ghidra/
 ---
 
+## Extra Install Steps
+
+You must install using `pip3 install binsync[ghidra]` for the extra dependencies.  After doing this, continue with [installation via Script](/docs/install/#installation-via-script).
+
+
 ## Extra Info
 BinSync is written in Python 3, however, Ghidra only has a Python 2 backend. 
 To deal with this, we use a vendored version of [ghidra_bridge](https://github.com/justfoxing/ghidra_bridge).

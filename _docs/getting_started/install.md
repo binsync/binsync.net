@@ -3,14 +3,16 @@ title: Install
 permalink: /docs/install/
 ---
 
+There are two main ways to install BinSync: via pip and an installation script, or via pip and manual configuration.
+
+**Before proceeding, please see specific instructions for [Binary Ninja](/docs/binja) and [Ghidra](/docs/ghidra)**
+
+## Installation via Script
+
 Installing BinSync can be as simple as using pip in combination with our Python-based installer:
 ```bash
 pip3 install binsync && binsync --install 
 ```
-
-**If you are using BS with Ghidra**, you must install using `pip3 install binsync[ghidra]` for the extra dependencies. 
-If you are using Binary Ninja, and you don't plan on developing BinSync, it's recommended to install it through the 
-Binary Ninja plugin manager, which allows you to skip these install steps. 
 
 Installation is a two-step process because we need to first install the BinSync core library into your Python install,
 then we need to copy the plugin code to your respective decompiler. Using the above command is the simplest solution
@@ -37,7 +39,7 @@ please jump to the [Manual Install](#manual-install) section.
 
 
 ## Manual Install
-If you were able to use the built-in Python script, skip this. 
+If you were able to use a plugin manager or the built-in Python script, skip this. 
 
 If you are unable to install using the earlier method, you are probably on Windows. In that case, installing
 BinSync is a two-step process: 
@@ -49,9 +51,12 @@ the `decompiler_stubs/ida_binsync.py` file, but for angr you would copy the enti
 In the case of Ghidra, you would place everything in the `decompiler_stubs/ghidra_binsync` into your `ghidra_scripts` folder (usually found in `~/`). 
 
 ## Unlocking your SSH Key
-If you plan on using BinSync to pull and push to a BinSync repo, you need a SSH key that is associated with that repo. If you plan 
-on only reading from the repo, you don't need one. Since BinSync relies on Git for its headless-server and database, you must unlock
-your SSH key when BinSync is in use.
+You can skip these steps if you plan on only reading from a BinSync repo, or you can already push and pull to the repo without entering a password/passphrase.
+
+If you plan on using BinSync to pull and push to a BinSync repo, you need a passwordless way to authenticate yourself, e.g. using an SSH key. Since BinSync relies on Git for its headless-server and database, you must unlock
+your SSH key when BinSync is in use. You can also use an SSH key without a passphrase (not recommended).
+
+**If connecting to a repo on GitHub,** use Personal Access Tokens. 
 
 ## Install Validation and Usage
 After you are done installing BinSync with the steps above, you should validate that the install works by syncing data from an example repo we have setup. 
