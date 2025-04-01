@@ -9,7 +9,7 @@ This is because we use a unified GUI made to work in a variety of QT versions.
 In this tutorial, you will validate your BinSync install can:
 1. Use Git to connect to a BinSync project
 2. Read data from the remote BinSync project
-3. Set the read data into your decompiler. 
+3. Set the read data into your decompiler 
 
 For this tutorial, we will use the example.bsproj repo that is a part of the BinSync project. 
 
