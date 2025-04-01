@@ -11,7 +11,7 @@ In this tutorial, you will validate your BinSync install can:
 2. Read data from the remote BinSync project
 3. Set the read data into your decompiler. 
 
-For this tutorial, we will use the example binsync repo that is a part of the BinSync project. 
+For this tutorial, we will use the example.bsproj repo that is a part of the BinSync project. 
 
 ### Sync Validation 
 1. Clone down the example BinSync project 
