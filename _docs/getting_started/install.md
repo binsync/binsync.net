@@ -50,13 +50,18 @@ For step 2, you copy (or link) the file associated with your decompiler in the `
 the `decompiler_stubs/ida_binsync.py` file, but for angr you would copy the entire `decompiler_stubs/angr_binsync` folder. 
 In the case of Ghidra, you would place everything in the `decompiler_stubs/ghidra_binsync` into your `ghidra_scripts` folder (usually found in `~/`). 
 
-## Unlocking your SSH Key
-You can skip these steps if you plan on only reading from a BinSync repo, or you can already push and pull to the repo without entering a password/passphrase.
+## Set Up Access to Your BinSync Repo
+You can skip these steps if you plan on only reading from a BinSync repo, or you can already push/pull without entering credentials.
 
-If you plan on using BinSync to pull and push to a BinSync repo, you need a passwordless way to authenticate yourself, e.g. using an SSH key. Since BinSync relies on Git for its headless-server and database, you must unlock
-your SSH key when BinSync is in use. You can also use an SSH key without a passphrase (not recommended).
+Since BinSync relies on Git for its headless server and database, and currently has no way to collect credentials from the user like the `git` command would, you must be able to push and pull to your BinSync repo non-interactively. 
 
-**If connecting to a repo on GitHub,** use Personal Access Tokens. 
+### Using an SSH Key
+You must unlock your SSH key when BinSync is in use (BinSync cannot prompt you to unlock it). You can also use an SSH key without a passphrase (not recommended). 
+
+### Using a Git Credential Helper
+A [Git credential helper](https://git-scm.com/doc/credential-helpers) can securely store your username and password, passing them to Git when executing a push or pull. If your BinSync repo is hosted on GitHub, we recommend using the [GitHub CLI](https://cli.github.com/) as a credential manager. Install and configure your credential manager before attempting to access your BinSync repo. 
+
+You'll need to use this method if you cloned your BinSync repo via HTTPS. 
 
 ## Install Validation and Usage
 After you are done installing BinSync with the steps above, you should validate that the install works by syncing data from an example repo we have setup. 
