@@ -49,14 +49,13 @@ Verify your terminal or log says (with your username):
 
 If you are on angr-management or Ghidra this may be hidden. Instead, you should see a panel open with your username on the bottom right. If on Binary Ninja, open the log panel and make sure your log scope includes the Plugin Manager.
 
-You should now see an Info Panel. Click on `Activity`, you can see other users' activities. You should also notice your username on the bottom right of the panel to be green (online) or yellow (connected but not online):
+You should now see an Info Panel. Click on `Activity`, you can see other users' activities. You should also notice your username on the bottom right of the panel to be green or yellow (depending on whether you have permission to push to the test repo's remote):
    <img src="/assets/img/demo2.png" width="50%" height="50%">
 
 Congrats, your BinSync seems to connect to a repo, and recognize you as a user.
 Let's test pulling to verify you can actually do stuff with your install.
 
-In your decompiler, click anywhere in the function `main` once. After a second or two you should notice on the
-   Info Panel that the words on the bottom left say `main@0x40071d`. This is your context.
+In your decompiler, click anywhere in the function `main` once. After a second or two you should notice on the Info Panel that the words on the bottom left say `main@0x40071d`. This is your context.
 
 Now click on the `Context` tab, and right click on the user `mahaloz`. Click the `Sync` popup.
    <img src="/assets/img/demo3.png" width="50%" height="50%">
