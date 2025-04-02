@@ -9,7 +9,7 @@ permalink: /docs/binja/
 If you are using Binary Ninja, and you don't plan on developing BinSync, it's recommended to install it through the Binary Ninja plugin manager, which allows you to skip these install steps.
 
 1. Click `Plugins->Manage Plugins` and search for and install BinSync
-2. Continue setting up BinSync by [unlocking your SSH key](/docs/install/#unlocking-your-ssh-key)
+2. Continue setting up BinSync by [setting up access to your BinSync repo](/docs/install/#set-up-access-to-your-binsync-repo)
 
 ### If you installed manually or via the install script
 Since Binja may be running a custom Python interpreter, please manually set or verify that your Python
