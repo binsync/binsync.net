@@ -39,8 +39,8 @@ On the bottom of the `Info Panel`, there is text on the right and left.
 The text on the left is your current Context, which we will explain in the [Context](#context) Tab section. 
 
 The text on the right is the user you are connected as and the connection status, depicted with three colors:
-- Green: Connected to BinSync repo and Online
-- Yellow: Connected to BinSync repo, not online (local only)
+- Green: Connected to a BinSync repo and able to pull and push to remote
+- Yellow: Connected to a BinSync repo but unable to pull or push to remote (either because your repo has no remote or you have limited permissions on the remote repo)
 - Red: Not connected to a BinSync repo 
 
 Yellow can occur when you create a local repo and don't connect a remote url to that repo. 

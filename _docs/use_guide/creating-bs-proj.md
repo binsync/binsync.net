@@ -8,7 +8,7 @@ Like in the [validation](/docs/install-validation) section, you can create your 
 1. Make a GitHub repo; it does not matter if you init it or add a README
 <img src="/assets/img/demo4.png" width="50%" height="50%">
 
-2. Copy the SSH url from the next page; It would look something like: `git@github.com:mahaloz/my_binsync_project.git`
+2. Copy the SSH or HTTPS URL from the next page; It would look something like: `git@github.com:mahaloz/my_binsync_project.git`
 
 3. Open a binary in your decompiler of choice; we will use `fauxware` again from the `example.bsproj` in intall.
 

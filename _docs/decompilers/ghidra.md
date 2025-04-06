@@ -3,6 +3,11 @@ title: Ghidra
 permalink: /docs/ghidra/
 ---
 
+## Extra Install Steps
+
+You must install using `pip3 install binsync[ghidra]` for the extra dependencies.  After doing this, continue with [installation via Script](/docs/install/#installation-via-script).
+
+
 ## Extra Info
 BinSync is written in Python 3, however, Ghidra only has a Python 2 backend. 
 To deal with this, we use a vendored version of [ghidra_bridge](https://github.com/justfoxing/ghidra_bridge).
@@ -14,10 +19,8 @@ We use Ghidra Bridge to make change requests to the Ghidra UI.
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
 |------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
-| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :x: 					                     | :heavy_check_mark: 	             |
-| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :x: 					                     | :heavy_check_mark: 	             |
-| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark:					             | :x: 					                       | :x: 					                     | :heavy_check_mark: 	             |
-| Push      	                        | :heavy_check_mark: 					                 | :heavy_check_mark:						           | :heavy_check_mark:				              | :heavy_check_mark: 						       | :x: 					                     | :x: 					                        |
-| Auto Push 	                        | :x: 					                                | :x:						                          | :x:					                            | :x:					                        | :x: 					                     | :x: 					                        |
-
-
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark: 	 					      | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark:					             | :heavy_check_mark: 					        | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark: 					                 | :heavy_check_mark:						           | :heavy_check_mark:				              | :heavy_check_mark: 						       | :heavy_check_mark: 					      | :x: 					                        |
+| Auto Push 	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :heavy_check_mark:					             | :heavy_check_mark:			           | :heavy_check_mark: 					      | :x: 					                        |
