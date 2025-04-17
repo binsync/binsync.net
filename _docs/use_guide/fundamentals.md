@@ -47,6 +47,8 @@ Yellow can occur when you create a local repo and don't connect a remote url to 
 
 There are four tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`. Each tab has a table which you can right-click to do actions.  
 
+**Note on addresses:** if you've loaded a binary with a base address offset, you may notice that the addresses of artifacts in your decompiler don't match those in the BinSync panel. By design, BinSync displays offset-normalized addresses. 
+
 ### Context
 The Context tab is likely to be the tab you use the most. The Context tab is always associated with a context, which is the current function you are looking at. In the above image, I was looking at `mahaloz_main`. The context changes any time you click on a function. 
 
