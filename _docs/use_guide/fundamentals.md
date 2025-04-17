@@ -68,6 +68,12 @@ The Globals tab shows things that can't be associated to a function. This includ
 
 Similarly to the Functions tab, you can sync either from the displayed person or some other person that has made a change in the past.
 
+The "T" column indicates the type of global:
+- S: Struct
+- T: Typedef
+- E: Enum
+- V: Variable
+
 ### Activity
 The Activity tab shows you people who are assumed to be actively reversing the Binary right now. This will show you a table of any user that has made a change in the last 2 hours to something in their binary. 
 
@@ -81,9 +87,7 @@ Now that you know how things work, you can checkout our example workflows.
 
 ## Known Issues 
 ### My BinSync is not auto-pushing things, wtf?
-This happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it. 
-
-If you don't 
+This usually happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it. 
 
 ### Git Error
 If you ever get a Git Error, you may get a stack trace ending in:

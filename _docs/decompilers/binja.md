@@ -19,6 +19,9 @@ for Binja is set to the same python as `python3` in your terminal. To do that:
 3. Select the correct Python interpreter for `Python Interpreter`
 4. Restart Binja
 
+## Usage Notes
+BinSync also works when you open .bndb files (or .hex files with identical contents) in place of the binary file used when creating the project. 
+
 ## Support Progress
 
 | Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
