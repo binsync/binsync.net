@@ -59,7 +59,7 @@ The Functions tab is likely the tab you will look at first when you open a new B
 
 ![](/assets/img/use_guide/manual2.png)
 
-Right-clicking on row give you the ability to do two thins:
+Right-clicking on row give you the ability to do two things:
 1. Sync from the currently displayed user (the last person to change it) for that specific function
 2. Sync from some other user that has changed that same function at some time before the currently displayed user.
 
