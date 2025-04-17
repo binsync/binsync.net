@@ -10,6 +10,6 @@ Next, while in this repo, run:
 bundle install
 bundle exec jekyll serve
 ``` 
-If you get an error on `bundle install`, you may need to change your gem path with `bundle config set path ~/.gem`.
+If you get an error on `bundle install`, you may need to change your gem path with `bundle config set path ~/.gem`. You may also need to delete `Gemfile.lock` to escape dependency hell. 
 
 And the site should be up! 

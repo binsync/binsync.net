@@ -47,6 +47,8 @@ Yellow can occur when you create a local repo and don't connect a remote url to 
 
 There are four tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`. Each tab has a table which you can right-click to do actions.  
 
+**Note on addresses:** if you've loaded a binary with a base address offset, you may notice that the addresses of artifacts in your decompiler don't match those in the BinSync panel. By design, BinSync displays offset-normalized addresses. 
+
 ### Context
 The Context tab is likely to be the tab you use the most. The Context tab is always associated with a context, which is the current function you are looking at. In the above image, I was looking at `mahaloz_main`. The context changes any time you click on a function. 
 
@@ -57,7 +59,7 @@ The Functions tab is likely the tab you will look at first when you open a new B
 
 ![](/assets/img/use_guide/manual2.png)
 
-Right-clicking on row give you the ability to do two thins:
+Right-clicking on row give you the ability to do two things:
 1. Sync from the currently displayed user (the last person to change it) for that specific function
 2. Sync from some other user that has changed that same function at some time before the currently displayed user.
 
@@ -67,6 +69,12 @@ The Globals tab shows things that can't be associated to a function. This includ
 ![](/assets/img/use_guide/manual3.png)
 
 Similarly to the Functions tab, you can sync either from the displayed person or some other person that has made a change in the past.
+
+The "T" column indicates the type of global:
+- S: Struct
+- T: Typedef
+- E: Enum
+- V: Variable
 
 ### Activity
 The Activity tab shows you people who are assumed to be actively reversing the Binary right now. This will show you a table of any user that has made a change in the last 2 hours to something in their binary. 
@@ -81,9 +89,7 @@ Now that you know how things work, you can checkout our example workflows.
 
 ## Known Issues 
 ### My BinSync is not auto-pushing things, wtf?
-This happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it. 
-
-If you don't 
+This usually happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it. 
 
 ### Git Error
 If you ever get a Git Error, you may get a stack trace ending in:
