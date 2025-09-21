@@ -1,15 +1,9 @@
-# binsync.net
-## Running locally
-First, you need to have Ruby and Gem installed, which may look like this:
-```
-sudo apt-get install ruby ruby-full build-essential gem -y && gem install bundler
-```
+# BinSync Landing Page
+A simple site for [https://binsync.net](https://binsync.net). Meant to show quick demos and redirect to docs.
 
-Next, while in this repo, run:
-```
-bundle install
-bundle exec jekyll serve
-``` 
-If you get an error on `bundle install`, you may need to change your gem path with `bundle config set path ~/.gem`. You may also need to delete `Gemfile.lock` to escape dependency hell. 
+## Development
+Edit files and open `index.html` in your browser.
 
-And the site should be up! 
+## Docs
+You can find the docs in the docs repo [docs.binsync.net](https://github.com/binsync/docs.binsync.net), which is live hosted at [https://docs.binsync.net](https://docs.binsync.net)
+
